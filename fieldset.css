@@ -1,0 +1,12 @@
+fieldset {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 0px;
+}
+
+.content {
+    text-align: center;
+    padding: 10px;
+    border: 0px;
+}
