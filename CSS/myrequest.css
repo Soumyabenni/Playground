@@ -111,5 +111,17 @@ body {
 
 .filter p span:first-child {
     font-size: 24px;
-    text-transform: uppercase;
+}
+
+.container .png {
+    padding: 20PX;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6f8f9;
+    margin: 15px;
+}
+
+.png img {
+    padding: 10px;
 }
