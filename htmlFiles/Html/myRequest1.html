@@ -21,12 +21,18 @@
                 <div class="request">
                     <span>My Requests</span>
                 </div>
-                <div class="search"><input type="text" placeholder="Search " /><img src="../icons/request-icons-03.png">
-                </div>
+                <div class="search"><input type="text" placeholder="Search " /><img src="../icons/request-icons-03.png"></div>
                 <div class="request-button"><button>NEW REQUEST</button></div>
             </div>
             <div class="filter">
-                <img src="../icons/request-icons-01.png" height="50px" width="50px" />
+                <div class="dropdown"> <img src="../icons/request-icons-01.png" height="50px" width="50px" onclick="dropdown()" />
+                    <div id="content">
+                        <p>Option 1</p>
+                        <p>Option 2</p>
+                        <p>Option 3</p>
+                    </div>
+                </div>
+               
                 <p><span>FILTER</span><br /><span>Showing approved requests</span></p>
             </div>
             <div class="png">
@@ -80,9 +86,19 @@
             </div>
         </div>
     </div>
-
     </div>
     </div>
+    <script>
+        function dropdown() {
+            var dropdown = document.getElementById("content");
+            if (dropdown.style.display === "" || dropdown.style.display === "none") {
+                dropdown.style.display = "block"
+            }
+            else {
+                dropdown.style.display = "none"
+            }
+        }
+    </script>
 </body>
 
 </html>
