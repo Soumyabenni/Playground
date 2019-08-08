@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #f6f8f9;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(255, 255, 255);
+	padding: 10px 35px;
+	box-shadow: 0px 0px 8px grey;
+}
+
+.profile img {
+	margin-left: 15px;
+}
+
+.profile img:first-child {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+.profile span {
+	line-height: 50px;
+	font-size: 18px;
+	font-family: 'Times New Roman', Times, serif;
+	margin-right: -5px;
+}
+
+table {
+	width: 90%;
+	margin: 3em;
+	border-spacing: 0px;
+	box-shadow: 0px 0px 15px gray;
+}
+table tr {
+	background-color: #ffffff;
+}
+
+table tr:first-child td {
+	padding: 40px 25px;
+}
+table tr td {
+	padding: 15px 25px;
+}
+
+table tr:nth-of-type(2) td {
+	padding: 15px 0px;
+}
+
+table .request-button {
+	padding: 10px 20px;
+	color: white;
+	font-size: 15px;
+	background-color: #32bdd2;
+
+	border-radius: 30px;
+	border: none;
+	outline: none;
+}
+
+.middlebox {
+	width: 100%;
+	margin-top: 3px;
+	position: relative;
+	border-radius: 40px;
+	border: 1px solid grey;
+}
+
+.middlebox img {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+}
+
+.search {
+	padding: 10px;
+	width: 92%;
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+	outline: none;
+	border: none;
+}
+
+.filter {
+	overflow: auto;
+	margin-top: 5px;
+	border-bottom: 1px solid #f6f8f9;
+	background-color: #ffffff;
+}
+
+.filter > div {
+	padding: 10px 20px;
+}
+.filter_desc {
+	padding-top: 5px;
+}
+
+.filter img {
+	float: left;
+	margin-right: 10px;
+}
+
+.pur {
+	margin-bottom: 15px;
+	color: #505050;
+	font-weight: bold;
+}
+
+.Submitted {
+	font-size: 15px;
+	color: #505050;
+}
+
+.date {
+	font-weight: bold;
+	color: #505050;
+}
+
+.approved {
+	color: #5a5a5a;
+	text-align: right;
+}
+
+.circle {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: #24d081;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.items {
+	width: 90%;
+	margin: 0 3em 3em 3em;
+}
+
+.items tr td {
+	padding: 15px 24px;
+}
+.showmore > div {
+	padding: 10px 30px;
+	text-align: center;
+}
+.showmore_desc {
+	padding-top: 5px;
+	float: left;
+}
+
+.showmore img {
+	margin-top: 10px;
+}
