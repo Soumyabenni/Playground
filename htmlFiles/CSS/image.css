@@ -1,0 +1,90 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.header {
+  width: 100%;
+  height: 40px;
+}
+
+.burger-menu {
+  width: 10%;
+  float: left;
+  padding: 5px;
+}
+
+.burger-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.user-menu {
+  width: 90%;
+  float: right;
+  padding: 8px;
+}
+
+.profile-icon {
+  width: 24px;
+  height: 24px;
+  float: right;
+  margin-right: 5px;
+}
+
+.text {
+  width: 24px;
+  height: 24px;
+  float: right;
+  margin-right: 12px;
+}
+
+.dropdown {
+  width: 8px;
+  height: 8px;
+  float: right;
+  margin-right: 5px;
+}
+
+.campaign {
+  background-color: gainsboro;
+  display: flex;
+  padding: 20px 0px 20px 5px;
+}
+
+.campaign img {
+  margin-right: 8px;
+}
+
+.campaign p {
+  margin-top: 3px;
+}
+
+.title {
+  padding: 10px;
+  margin: 10px 0px 0px 10px;
+  line-height: 30px;
+}
+
+.title p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.personal {
+  display: flex;
+}
+
+.personal p {
+  font-size: 12px;
+}
+
+.personal img {
+  margin: 5px 0px 0px 5px;
+}
