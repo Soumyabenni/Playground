@@ -1,0 +1,182 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.header {
+    width: 100%;
+    height: 40px;
+}
+
+.burger-menu {
+    width: 10%;
+    float: left;
+    padding: 5px;
+}
+
+.burger-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.user-menu {
+    width: 90%;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+}
+
+.dropdown {
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+}
+
+.campaign {
+    background-color: gainsboro;
+    display: flex;
+    padding: 20px 0px 20px 5px;
+}
+
+.campaign img {
+    margin-right: 8px;
+}
+
+.campaign p {
+    margin-top: 3px;
+}
+
+.title {
+    padding: 10px 20px;
+    margin: 10px 0px 0px 10px;
+    line-height: 30px;
+}
+
+.title p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.personal {
+    display: flex;
+}
+
+.personal p {
+    font-size: 12px;
+}
+
+.personal img {
+    margin: 5px 0px 0px 5px;
+}
+
+.plan {
+    padding: 10px 20px;
+    display: flex;
+    margin: 10px 0px 0px 10px;
+    line-height: 30px;
+}
+
+.plan :first-child {
+    color: rebeccapurple;
+    border-bottom: 2px solid rebeccapurple;
+    margin-right: 55px;
+}
+
+.add-image {
+    padding: 10px 20px;
+    margin: 30px 0px 50px 40px;
+}
+
+.add-image img {
+    filter: drop-shadow(-5px 4px 3px rgba(0, 0, 0, 0.3));
+}
+
+.introduction {
+    padding: 0px 10px 15px 10px;
+    margin: 2px 0px 0px 20px;
+    width: 60%;
+    border-left: 1px solid black;
+}
+
+.introduction p {
+    margin-left: 25px;
+}
+
+.first {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.round {
+    border: 1px solid black;
+    background-color: #ffffff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: -20px;
+}
+
+.introduction :first-child {
+    padding: 0px 0px 15px 0px;
+    font-weight: bold;
+}
+
+.lorem {
+    margin-left: 25px;
+    padding: 15px 10px 15px 33px;
+    margin: 1px 20px;
+    width: 60%;
+    border-left: 1px solid black;
+}
+
+.create {
+    margin-left: 20px;
+    background-color: blueviolet;
+    width: 70%;
+    padding: 10px 10px 10px 2px;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.round1 {
+    border: 1px solid black;
+    background-color: #ffffff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: -13px;
+}
+
+.inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner p {
+    color: white;
+    margin-left: 15px;
+}
+
+.last {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
