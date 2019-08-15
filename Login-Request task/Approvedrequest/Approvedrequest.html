@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Approved request</title>
+    <link rel="stylesheet" href="Approvedrequest.css" />
+</head>
+
+<body>
+    <div>
+        <nav class="header">
+            <img src="../icons/request-icons-02.png" height="40px" width="40px" />
+            <div class="profile">
+                <img src="../icons/profile.png" height="40px" width="40px" />
+                <span
+                    style="font:Roboto; font-size:12px; letter-spacing:0.9px; line-height:14px; font-weight:medium;">John
+                    Doe</span>
+                <img src="../icons/request-icons-05.png" height="20px" width="20px" />
+            </div>
+        </nav>
+        <div class="container">
+            <div class="top-header">
+                <div class="request">
+                    <span style="font-size:16px; letter-spacing:0.8px; line-height:19px; font-weight:medium;">My
+                        Requests</span>
+                </div>
+                <div class="search"><input type="text" placeholder="Search " id="icon" /></div>
+                <div class="request-button"><button
+                        style="font-size:12px; letter-spacing:0.6px; line-height:14px; font-weight:bold;">NEW
+                        REQUEST</button></div>
+            </div>
+            <div class="filter">
+                <div class="dropdown"> <img id="filter-menu" src="../icons/request-icons-01.png" height="50px"
+                        width="50px" style="cursor: pointer;" />
+                    <div id="content" style="cursor:pointer;">
+                        <p style="color: #B5B5B5;">CLEAR</p>
+                        <p>APPROVED</p>
+                        <p>DRAFT</p>
+                        <p>AWAITING</p>
+                        <p>REJECTED</p>
+                    </div>
+                </div>
+                <p><span
+                        style="font-size:14px; letter-spacing:1.2px; line-height:14px; font-weight:regular;">FILTER</span><br />
+                    <span style="font-size:12px; letter-spacing:0.75px; line-height:11px; font-weight:regular;">You have
+                        not applied any filter</span></p>
+            </div>
+            <div class="png">
+                <div>
+                    <p class="pur" style="font-size:16px; letter-spacing:1.4px; line-height:16px; font-weight:medium;">
+                        PUR - 2019 - 056</p>
+                    <p class="Submitted"
+                        style="font-size:12px; letter-spacing:0.6px; line-height:14px; font-weight:regular;">Submitted
+                        on</p>
+                    <p class="date" style="font-size:14px; letter-spacing:0.7px; line-height:30px; font-weight:medium;">
+                        06 Jul 2019
+                    </p>
+                </div>
+                <div> <img src="../icons/request-icons-14.png" height="90px" width="90px" onclick="notify()"
+                        style="cursor: pointer;" /></div>
+                <div class="approved"
+                    style="font-size:14px; letter-spacing:1.4px; line-height:16px; font-weight:regular;">AWAITING
+                    APPROVAL<div class=" circle" style="background-color: yellow"></div>
+                </div>
+            </div>
+            <div class="png">
+                <div>
+                    <p class="pur" style="font-size:16px; letter-spacing:1.4px; line-height:16px; font-weight:medium;">
+                        PUR - 2019 - 056</p>
+                    <p class="Submitted"
+                        style="font-size:12px; letter-spacing:0.6px; line-height:14px; font-weight:regular;">Submitted
+                        on</p>
+                    <p class="date" style="font-size:14px; letter-spacing:0.7px; line-height:30px; font-weight:medium;">
+                        06 Jul 2019</p>
+                </div>
+
+                <div> <img src="../icons/request-icons-14.png" height="90px" width="90px" /></div>
+                <div class="approved"
+                    style="font-size:14px; letter-spacing:1.4px; line-height:16px; font-weight:regular;">APPROVED<div
+                        class=" circle" style="background-color: green"></div>
+
+                </div>
+            </div>
+            <div class="png">
+                <div>
+                    <p class="pur" style="font-size:16px; letter-spacing:1.4px; line-height:16px; font-weight:medium;">
+                        PUR - 2019 - 056</p>
+                    <p class="Submitted"
+                        style="font-size:12px; letter-spacing:0.6px; line-height:14px; font-weight:regular;">Last saved
+                        on</p>
+                    <p class="date" style="font-size:14px; letter-spacing:0.7px; line-height:30px; font-weight:medium;">
+                        06 Jul 2019</p>
+                </div>
+
+                <div> <img src="../icons/request-icons-14.png" height="90px" width="90px" /></div>
+                <div class="approved"
+                    style="font-size:14px; letter-spacing:1.4px; line-height:16px; font-weight:regular;">DRAFT<div
+                        class=" circle" style="background-color: yellow"></div>
+
+                </div>
+            </div>
+            <div class="png">
+                <div>
+                    <p class="pur" style="font-size:16px; letter-spacing:1.4px; line-height:16px; font-weight:medium;">
+                        PUR - 2019 - 056</p>
+                    <p class="Submitted"
+                        style="font-size:12px; letter-spacing:0.6px; line-height:14px; font-weight:regular;">Submitted
+                        on</p>
+                    <p class="date" style="font-size:14px; letter-spacing:0.7px; line-height:30px; font-weight:medium;">
+                        20 Jun 2019</p>
+                </div>
+
+                <div> <img src="../icons/request-icons-14.png" height="90px" width="90px" /></div>
+                <div class="approved"
+                    style="font-size:14px; letter-spacing:1.4px; line-height:16px; font-weight:regular;">REJECTED<div
+                        class=" circle" style="background-color: red"></div>
+                </div>
+            </div>
+            <div class="line">
+                <span>SHOW MORE</span><img src="../icons/request-icons-05.png" height="20px" width="20px" />
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+
+        var filter = document.getElementById("filter-menu");
+        filter.addEventListener('click', dropdown)
+        var dropdown = document.getElementById("content");
+
+        function dropdown() {
+            if (dropdown.style.display === "" || dropdown.style.display === "none") {
+                dropdown.style.display = "block";
+            }
+            else {
+                dropdown.style.display = "none";
+            }
+
+        }
+
+        window.addEventListener('click', outsideClick)
+        function outsideClick(e) {
+            if (e.target !== filter) {
+                dropdown.style.display = "none";
+            }
+        }
+        function notify() {
+            window.location.assign('../requestView/requestView.html');
+        }
+    </script>
+</body>
+
+</html>
