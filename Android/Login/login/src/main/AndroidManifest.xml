@@ -10,6 +10,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".Forgotalert" />
+        <activity
+            android:name=".BugerMenu"
+            android:label="@string/title_activity_buger_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -37,11 +37,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:textColor="@android:color/black"
+            tools:textColor="#747474"
             tools:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -57,7 +57,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -82,7 +82,7 @@
             android:layout_marginTop="8dp"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText3"
+            app:layout_constraintTop_toBottomOf="@+id/password"
             app:srcCompat="@drawable/w2" />
 
         <TextView
@@ -93,12 +93,12 @@
             android:text="This field is required"
             android:visibility="gone"
             app:layout_constraintStart_toEndOf="@+id/w2"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/f1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
@@ -112,14 +112,16 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="78dp"
+            android:layout_width="106dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="44dp"
+            android:background="@drawable/login_radius"
             android:text="LOGIN"
+            android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -134,7 +136,7 @@
             android:layout_marginTop="8dp"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"
+            app:layout_constraintTop_toBottomOf="@+id/username"
             app:srcCompat="@drawable/w1" />
 
         <TextView
@@ -145,6 +147,6 @@
             android:text="This field is required"
             android:visibility="gone"
             app:layout_constraintStart_toEndOf="@+id/w1"
-            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+            app:layout_constraintTop_toBottomOf="@+id/username" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
