@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Forget Password Error</title>
+    <link rel="StyleSheet" href="Forgetpwderror.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+
+            <div class="inner-container">
+                <h3>Forget Password</h3>
+            </div>
+            <div class="inner-container">
+                <span class="subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor
+                    vehicula.
+                </span>
+
+            </div>
+
+            <div class="inner-container">
+                <span>
+                    Email
+                </span>
+                <div class="input-container">
+                    <input type="text" name="email" id="email">
+                    <div class="error"><img src="../icons/request-icons-07.png" /><span>This field
+                            is
+                            required</span>
+                    </div>
+                    <div class="error"><img src="../icons/request-icons-07.png" /><span>This email is not
+                            registered with us
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-container">
+                <div class="submit">
+                    <button style="cursor: pointer;" id="addItem">CONTINUE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="model">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="forget">
+                    <label>FORGOT PASSWORD</label>
+                </div>
+                <div class="link">
+                    <p>The link has been sent to your email. </p>
+                    <p>The generated link will be active for 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var addItem = document.getElementById('addItem');
+        var modal = document.getElementById('modal');
+        addItem.addEventListener('click', Openmodal);
+        function Openmodal() {
+            modal.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

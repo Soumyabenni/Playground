@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Login1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+    <link rel="StyleSheet" href="loginerror.css" type="text/css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+
+            <div class="login">
+                <label style="font:Roboto;  letter-spacing: 1.6px;">Login</label>
+            </div>
+
+            <div class="inner-container">
+                <span>
+                    Email or Username
+                </span>
+                <div class="input-container">
+                    <input type="text" name="email" id="email">
+                    <div class="error"><img src="../icons/request-icons-07.png" /><span>This field
+                            is
+                            required</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-container">
+                <span>
+                    Password
+                </span>
+                <div class="input-container">
+                    <input type="text" name="password" id="password" placeholder="*********">
+                    <div class="error"><img src="../icons/request-icons-07.png" /><span>This field
+                            is
+                            required</span>
+                    </div>
+                </div>
+                <div class="remember-container">
+                    <div class="remember">
+                        <div>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label>Remember me</label>
+                        </div>
+                    </div>
+                    <div class="forgot" onclick="pwd()">
+                        <label style="cursor:pointer;">Forgot Password</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-container">
+                <div class="submit">
+                    <button onclick="button()" style="cursor:pointer;">LOGIN</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function button() {
+            location.replace('../Approvedrequest/Approvedrequest.html')
+        }
+        function pwd() {
+            location.replace('../Forgetpassword/Forgetpassword.html');
+        }
+
+    </script>
+</body>
+
+</html>

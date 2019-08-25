@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Add Items</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="items.css" />
+</head>
+
+<body>
+  <div>
+    <nav class="header">
+      <img src="../icons/request-icons-02.png" height="40px" width="40px" />
+      <div class="profile">
+        <img src="../icons/profile.png" height="45px" width="45px" />
+        <span>John Doe</span>
+        <img src="../icons/request-icons-05.png" height="20px" width="20px" />
+      </div>
+    </nav>
+    <div class="container">
+      <div class="top-header">
+        <p style="font-family: Roboto; font-weight:bold; font-size: 14px;">REQUISITION </p><img
+          src="../icons/request-image-31.png" width="70%" height="70%" />
+      </div>
+      <div class="main">
+        <div class="first">
+          <div>
+            <p style="font-family: Roboto; font-weight:bold; font-size: 14px; color:#505050;">ITEMS</p>
+            <p style="font-size: 12px; color: #747474;">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit.</p>
+          </div>
+          <div class="additems">
+            <span style="font-size: 12px; font-family: Roboto; font-style: medium; color: #505050;">ADD
+              ITEMS</span><img src="../icons/request-icons-10.png" height="50px" width="50px" id="addItem" />
+          </div>
+        </div>
+        <div class="readmore">
+          <div class="lines">
+            <p>IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel XeonE3
+              (QuadCore)E3-1225v5"(3.3 GHz /Cache 8 MB)
+            </p>
+            <button style="font-size: 10px; font-family: Roboto; font-weight: bold; color:#747474 ;">Read
+              more</button>
+          </div>
+          <div style="align-self: center">01</div>
+          <div style="align-self: center">10 Jul 2019</div>
+          <div style="align-self: center">Rs. 45, 000</div>
+          <div style="align-self: center; cursor: pointer;" class="editDelete"> <img src="../icons/request-icons-11.png"
+              height="50px" width="50px" onclick="editDelete()" />
+            <div id="content">
+              <p>EDIT</p>
+              <p>DELETE</p>
+            </div>
+          </div>
+        </div>
+        <div class="readmore">
+          <div class="lines">
+            <p>IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel XeonE3
+              (QuadCore)E3-1225v5"(3.3 GHz /Cache 8 MB)
+            </p>
+            <button style="font-size: 10px; font-family: Roboto; font-weight: bold; color:#747474 ;">Read
+              more</button>
+          </div>
+          <div style="align-self: center">01</div>
+          <div style="align-self: center">10 Jul 2019</div>
+          <div style="align-self: center">Rs. 45, 000</div>
+          <div style="align-self: center"> <img src="../icons/request-icons-11.png" height="50px" width="50px" /></div>
+        </div>
+        <div class="readmore">
+          <div class="lines">
+            <p>IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel XeonE3
+              (QuadCore)E3-1225v5"(3.3 GHz /Cache 8 MB)
+            </p>
+            <button style="font-size: 10px; font-family: Roboto; font-weight: bold; color:#747474 ;">Read
+              more</button>
+          </div>
+          <div style="align-self: center">01</div>
+          <div style="align-self: center">10 Jul 2019</div>
+          <div style="align-self: center">Rs. 45, 000</div>
+          <div style="align-self: center"> <img src="../icons/request-icons-11.png" height="50px" width="50px" /></div>
+        </div>
+        <div class="readmore">
+          <div class="lines">
+            <p>IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel XeonE3
+              (QuadCore)E3-1225v5"(3.3 GHz /Cache 8 MB)
+            </p>
+            <button style="font-size: 10px; font-family: Roboto; font-weight: bold; color:#747474 ;">Read
+              more</button>
+          </div>
+          <div style="align-self: center">01</div>
+          <div style="align-self: center">10 Jul 2019</div>
+          <div style="align-self: center">Rs. 45, 000</div>
+          <div style="align-self: center"> <img src="../icons/request-icons-11.png" height="50px" width="50px" /></div>
+        </div>
+        <div class="readmore">
+          <div class="lines">
+            <p>IBM ThinkServer TS150 Tower Server With Max. Processor 1 x Intel XeonE3
+              (QuadCore)E3-1225v5"(3.3 GHz /Cache 8 MB)
+            </p>
+            <button style="font-size: 10px; font-family: Roboto; font-weight: bold; color:#747474 ;">Read
+              more</button>
+          </div>
+          <div style="align-self: center">01</div>
+          <div style="align-self: center">10 Jul 2019</div>
+          <div style="align-self: center">Rs. 45, 000</div>
+          <div style="align-self: center"> <img src="../icons/request-icons-11.png" height="50px" width="50px" /></div>
+        </div>
+        <div class="last">
+          <p onclick="save()"
+            style="font-family: Roboto; font-weight:600; font-size: 12px; color:#595959; cursor: pointer;">
+            SAVE DRAFT</p>
+          <a href="../Requisition/requisition.html" style="cursor: pointer;">BACK</a> <button onclick="next()"
+            style="font-family: Roboto; font-weight:600; font-size: 12px; cursor: pointer;">NEXT&nbsp;&rarr;</button>
+        </div>
+
+        <div id="modal" class="model">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <span style="font-family: roboto , medium; font-size:20px; color:#5A5A5A">ADD ITEMS</span>
+            </div>
+            <div class="modal-body">
+              <p>DESCRIPTION</p>
+              <textarea rows="6" cols="60"></textarea>
+              <p>Qty</p>
+              <input type="text" />
+              <p>FULLFILLMENT DUE DATE</p>
+              <div class="date-wrapper">
+                <input type="text" />
+                <img src="../icons/request-icons-17.png" height="55px" width="50px" /></div>
+              <p>APPROXIMATE PRICE</p>
+              <input type="text" />
+            </div>
+            <div class="modal-footer">
+              <p>CANCEL</p>
+              <button>DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById('modal');
+      var closeBtn = document.getElementsByClassName('closeBtn')[0];
+      var addItem = document.getElementById('addItem');
+
+      addItem.addEventListener('click', Openmodal);
+      function Openmodal() {
+        modal.style.display = 'block';
+        console.log('Display additem content page')
+      }
+      closeBtn.addEventListener('click', Closemodal);
+      function Closemodal() {
+        modal.style.display = 'none';
+
+      }
+
+      function editDelete() {
+        var editDelete = document.getElementById("content");
+        if (editDelete.style.display === "" || editDelete.style.display === "none") {
+          editDelete.style.display = "block"
+        }
+        else {
+          editDelete.style.display = "none"
+        }
+      }
+      function next() {
+        window.location.assign('../Attachments/attachments.html');
+      }
+      function save() {
+        console.log("hi");
+        window.location.assign('../Acknowledgement/act.html');
+      }
+    </script>
+</body>
+
+</html>

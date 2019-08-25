@@ -1,0 +1,96 @@
+@import url("https: //fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f6f8f9;
+  font-family: Roboto;
+  letter-spacing: 1px;
+}
+
+.container {
+  background-color: #ffffff;
+  margin: 25px;
+  min-height: 92%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .main {
+  width: 30%;
+  min-height: 300px;
+}
+
+.main .login {
+  margin: 10px 10px 30px 10px;
+  width: 15%;
+}
+
+.login label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #595959;
+  font-variant-caps: all-petite-caps;
+  border-bottom: 2.5px solid #595959;
+}
+
+.inner-container {
+  margin: 10px 10px 30px 10px;
+  color: #505050;
+  font-size: 14px;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 4%;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  outline: none;
+}
+
+.remember-container {
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember {
+  display: flex;
+  flex-direction: row;
+}
+
+.remember label {
+  padding: 0 0 0 5px;
+}
+
+.forgot {
+  border-bottom: 2px solid #707070;
+}
+
+.forgot label {
+  font-size: 14px;
+}
+
+.submit {
+  padding: 10px 0 0 0;
+}
+
+.submit button {
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+  border: 0;
+  background-color: #32bdd2;
+}

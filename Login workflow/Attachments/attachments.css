@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f6f8f9;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 35px;
+  box-shadow: 0px 0px 8px grey;
+}
+
+.profile {
+  width: 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile span {
+  color: #595959;
+  font-size: 12px;
+}
+
+.container {
+  background-color: #fcfcfc;
+  min-height: 500px;
+  margin: 35px;
+  box-shadow: 0px 0px 8px grey;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+.top-header {
+  width: 7%;
+  height: 100%;
+  line-height: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.top-header p {
+  margin: 30px 0px;
+  transform: rotate(-90deg);
+}
+
+.attachments {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.main {
+  margin: 60px 40px 0 40px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #F0F0F0;
+  min-height: 463px;
+}
+
+.first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 30px 40px;
+  border: 1px solid #e0e0e0;
+  line-height: 20px;
+}
+
+.browse {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 56px 0px 100px 42px;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+}
+
+.left {
+  background-color: #f6f8f9;
+  flex: 50%;
+  color: #747474;
+  padding: 20px;
+  line-height: 15px;
+  border: 1px solid #DFEBEF;
+}
+
+.left button {
+  padding: 8px 20px;
+  text-align: center;
+  background-color: #32bdd2;
+  color: #ffffff;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-weight: Medium;
+}
+
+.right {
+  background-color: #32bdd2;
+  display: flex;
+  flex: 50%;
+  padding: 20px;
+  border: 1px solid #32BDD2;
+}
+
+.right .dot {
+  background-color: #32bdd2;
+  border: 2px dashed #ffffff;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.bottom {
+  display: flex;
+  border: 1px solid #DFEBEF;
+}
+
+.file {
+  width: 80%;
+}
+
+.content {
+  padding: 10px;
+  border-bottom: 1px solid #DFEBEF;
+}
+
+.file-abc {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-color: #E0E0E0;
+  width: 50%;
+  color: #595959;
+  font-size: 10px;
+}
+
+.description {
+  padding: 10px 0 1px 10px;
+}
+
+.description input {
+  border: none;
+}
+
+.upload {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #DFEBEF;
+}
+
+.upload button {
+  margin: 0 auto;
+  background-color: #32BDD2;
+  padding: 5px 15px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.error {
+  background-color: #FFF5F5;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.lines button {
+  padding-top: 10px;
+  background-color: #ffffff;
+  float: left;
+  border: none;
+}
+
+.upload-container {
+  display: none;
+  margin-top: 80px;
+}
+
+.uploadview {
+  border: 1px solid #D5E2E8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 45%;
+  font-size: 12px;
+}
+
+.uploadview .fileabcdoc {
+  width: 80%;
+  color: #595959;
+  border-right: 1px solid #D5E2E8;
+}
+
+.abcdoc {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 60px 5px 15px;
+  border-bottom: 1px solid #D5E2E8;
+}
+
+.uploadview .uploadimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  /* border-left: 1px solid #D5E2E8; */
+}
+
+.last {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0px 30px;
+  margin: 90px 10px 20px 9px;
+}
+
+.last p {
+  border-bottom: 2px solid #595959;
+  padding-bottom: 5px;
+}
+
+.last button:last-child {
+  padding: 8px 12px;
+  background-color: #32bdd2;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+}
+
+.last .back {
+  padding-bottom: 5px;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #32bdd2;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  color: #32bdd2;
+}
+
+.dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 12px;
+  color: white;
+}
