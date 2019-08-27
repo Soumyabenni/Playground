@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/titles"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginStart="32dp"
@@ -27,10 +26,10 @@
         android:hint="Submitted on"
         android:text="Submitted on"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titles" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
-        android:id="@+id/dates"
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -50,7 +49,7 @@
         android:layout_marginTop="16dp"
         android:background="@android:color/holo_green_dark"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dates" />
+        app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <TextView
         android:id="@+id/status"
@@ -61,7 +60,7 @@
         android:layout_marginTop="15dp"
         android:text="APPROVED"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/dates" />
+        app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <ImageView
         android:id="@+id/imageView3"

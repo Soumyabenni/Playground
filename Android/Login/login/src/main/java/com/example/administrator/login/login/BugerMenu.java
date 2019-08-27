@@ -12,17 +12,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class BugerMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-   // ListView listview;
+    ListView box;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_forgot_password);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_forgot_password);
+
+
+        box = findViewById(R.id.box);
+
+        String title[] = {"PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056"};
+        String date[] = {"06 Jul 2019", "06 Jul 2019", "06 Jul 2019", "06 Jul 2019", "06 Jul 2019"};
+        String status[] = {"AWAITING APPROVAL", "APPROVED", "DRAFT", "REJECTED", "APPROVED"};
+
+
+        ListAdapter listAdapter = new MyListAdapter(getApplicationContext(), title, date, status);
+        box.setAdapter(listAdapter);
+
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buger_menu);
