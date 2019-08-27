@@ -1,8 +1,10 @@
 package com.example.administrator.login.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
@@ -19,6 +22,9 @@ public class BugerMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ListView box;
+    Button requestBtn;
+
+
 
 
     @Override
@@ -26,7 +32,7 @@ public class BugerMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-
+        requestBtn=findViewById(R.id.requestBtn);
         box = findViewById(R.id.box);
 
         String title[] = {"PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056"};
@@ -37,8 +43,15 @@ public class BugerMenu extends AppCompatActivity
         ListAdapter listAdapter = new MyListAdapter(getApplicationContext(), title, date, status);
         box.setAdapter(listAdapter);
 
+        requestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),RecycleViewList.class);
+                startActivity(intent);
 
 
+            }
+        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buger_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

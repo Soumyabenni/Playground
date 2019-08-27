@@ -15,7 +15,8 @@
         <activity
             android:name=".BugerMenu"
             android:label="@string/title_activity_buger_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RecycleView"></activity>
     </application>
 
 </manifest>
