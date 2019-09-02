@@ -22,7 +22,7 @@ public class BugerMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ListView box;
-    Button requestBtn;
+    //Button requestBtn;
 
 
 
@@ -32,7 +32,7 @@ public class BugerMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        requestBtn=findViewById(R.id.requestBtn);
+       // requestBtn=findViewById(R.id.requestBtn);
         box = findViewById(R.id.box);
 
         String title[] = {"PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056", "PUR - 2019 - 056"};
@@ -43,15 +43,15 @@ public class BugerMenu extends AppCompatActivity
         ListAdapter listAdapter = new MyListAdapter(getApplicationContext(), title, date, status);
         box.setAdapter(listAdapter);
 
-        requestBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),RecycleViewList.class);
-                startActivity(intent);
-
-
-            }
-        });
+//        requestBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(getApplicationContext(),RecycleViewList.class);
+//                startActivity(intent);
+//
+//
+//            }
+//        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buger_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
