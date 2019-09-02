@@ -178,7 +178,7 @@ body {
 }
 
 #icon {
-  background-image: url("request-icons-03.png");
+  background-image: url("../icons/request-icons-03.png");
   background-position: right;
   background-size: 25px;
   background-repeat: no-repeat;

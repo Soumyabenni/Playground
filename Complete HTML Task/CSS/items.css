@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,21 +7,34 @@
 
 body {
   background-color: #f6f8f9;
+  font-family: "Roboto";
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
-  padding: 5px 35px;
+  padding: 10px 35px;
   box-shadow: 0px 0px 8px grey;
 }
 
+
 .profile {
-  width: 12%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.profile img:first-child {
+  margin-right: 10px;
+}
+
+.profile img:last-child {
+  margin-left: 10px;
+}
+
+.more {
+  display: none;
 }
 
 .container {
@@ -60,7 +74,7 @@ body {
   align-items: center;
   background-color: #f0f0f0;
   margin: 5px;
-  padding: 10px;
+  padding: 10px 20px 0px;
 }
 
 .additems {
@@ -71,11 +85,11 @@ body {
 }
 
 .additems span {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .additems img {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .readmore {
@@ -116,10 +130,12 @@ body {
 }
 
 .readmore .lines {
+  padding: 15px;
   height: 100%;
   width: 100%;
-  flex-basis: 300px;
+  flex-basis: 280px;
   border-color: #f0f0f0;
+  text-align: left;
 }
 
 .lines button {

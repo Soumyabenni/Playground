@@ -7,23 +7,29 @@
 
 body {
   background-color: #f6f8f9;
+  font-family: "Roboto";
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
-  padding: 5px 35px;
+  padding: 10px 35px;
   box-shadow: 0px 0px 8px grey;
 }
 
 .profile {
-  width: 12%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  color: #595959;
-  font-weight: medium;
+}
+
+.profile img:first-child {
+  margin-right: 10px;
+}
+
+.profile img:last-child {
+  margin-left: 10px;
 }
 
 .container {

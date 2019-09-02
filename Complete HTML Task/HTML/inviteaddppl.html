@@ -12,9 +12,12 @@
         <nav class="header">
             <img src="../icons/request-icons-02.png" height="40px" width="40px" />
             <div class="profile">
-                <img src="../icons/profile.png" height="45px" width="45px" />
-                <span style="font-family: Roboto; font-weight:bold;">John Doe</span>
-                <img src="../icons/request-icons-05.png" height="20px" width="20px" />
+                <img src="../icons/profile.png" height="40px" width="40px" />
+                <span
+                    style="font:Roboto; font-size:12px; letter-spacing:0.9px; line-height:14px; font-weight:bold;  color: #595959;
+                    ">John
+                    Doe</span>
+                <img src="../icons/request-icons-05.png" height="18px" width="18px" />
             </div>
         </nav>
         <div class="container">
@@ -100,7 +103,8 @@
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="1"
+                                onclick="showminus(1)"/>
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -109,7 +113,8 @@
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="2"
+                                onclick="showminus(2)"/>
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -118,7 +123,8 @@
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="3"
+                                onclick="showminus(3)"/>
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -128,13 +134,17 @@
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="4"
+                                onclick="showminus(4)"/>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <p>CANCEL</p>
-                        <button>DONE</button>
+                        <p onclick="Closemodal()">CANCEL</p>
+                        <div class="done">
+                            <p>You haven't selected any person</p>
+                            <button onclick="Closemodal()">DONE</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,6 +164,10 @@
         function Closemodal() {
             modal.style.display = 'none';
         }
+        function showminus(id) {
+                    var img = document.getElementById(id);
+                    img.setAttribute('src', '../icons/request-icons-09.png')
+                }
         function back() {
             window.location.assign('attachments.html');
         }
