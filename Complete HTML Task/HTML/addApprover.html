@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Invite AddPeople</title>
+    <title>Approval</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="inviteaddppl.css" />
+    <link rel="stylesheet" href="../CSS/addApprover.css" />
 </head>
 
 <body>
@@ -13,36 +13,36 @@
             <img src="../icons/request-icons-02.png" height="40px" width="40px" />
             <div class="profile">
                 <img src="../icons/profile.png" height="45px" width="45px" />
-                <span style="font-family: Roboto; font-weight:bold;">John Doe</span>
+                <span style="font-family: Roboto; font-weight:bold; ">John Doe</span>
                 <img src="../icons/request-icons-05.png" height="20px" width="20px" />
             </div>
         </nav>
         <div class="container">
             <div class="top-header">
-                <p style="font-family: Roboto; font-weight:bold; font-size: 14px; letter-spacing: 2.8px;">REQUISITION
-                </p><img src="../icons/request-image-33.png" width="75%" height="65%" />
+                <p style="font-family: Roboto; font-weight:bold; font-size: 16px;">REQUISITION </p><img
+                    src="../icons/request-image-34.png" width="75%" height="65%" />
             </div>
             <div class="invite">
                 <div class="main">
                     <div class="first">
                         <div>
                             <p style="font-family: Roboto; font-weight:bold; font-size: 14px; color:#505050;">
-                                INVITE PEOPLE
+                                APPROVAL(S)
                             </p>
                             <p style="font-size: 12px; color: #747474;">Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit.</p>
                         </div>
                         <div class="additems">
                             <span style="font-size: 12px; font-family: Roboto; font-weight: bold; color: #505050;">ADD
-                                PEOPLE</span><img id="addItem" src="../icons/request-icons-10.png" height="50px"
-                                width="50px" />
+                                APPROVER
+                            </span><img id="addItem" src="../icons/request-icons-10.png" height="50px" width="50px" />
                         </div>
                     </div>
                     <div class="browse">
                         <div class="card">
                             <div class="new">
                                 <img src="../icons/profile.png" height="40px" width="40px" />
-                                <p><span style="font-family: Roboto;  font-size: 12px;">Luke Ray</span><br /><span
+                                <p><span style="font-family: Roboto; font-size: 12px;">John Campbell</span><br /><span
                                         style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                         amet.</span></p>
                             </div>
@@ -51,16 +51,7 @@
                         <div class="card">
                             <div class="new">
                                 <img src="../icons/profile.png" height="40px" width="40px" />
-                                <p><span style="font-family: Roboto;  font-size: 12px;">Daisy Lake</span><br /><span
-                                        style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
-                                        amet.</span></p>
-                            </div>
-                            <img src="../icons/request-icons-15.png" height="30px" width="30px" />
-                        </div>
-                        <div class="card">
-                            <div class="new">
-                                <img src="../icons/profile.png" height="40px" width="40px" />
-                                <p><span style="font-family: Roboto;  font-size: 12px;">Mark Smith</span><br /><span
+                                <p><span style="font-family: Roboto;  font-size: 12px;">Kate Gill</span><br /><span
                                         style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                         amet.</span></p>
                             </div>
@@ -100,7 +91,8 @@
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="1"
+                                    onclick="showminus(1)" />
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -109,7 +101,8 @@
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="2"
+                                    onclick="showminus(2)" />
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -118,53 +111,61 @@
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="3"
+                                    onclick="showminus(3)" />
                             </div>
                             <div class="card1">
                                 <div class="new1">
                                     <img src="../icons/profile.png" height="40px" width="40px" />
                                     <p><span style="font-family: Roboto;  font-size: 12px;">Harry
                                             Weasley</span><br /><span
-                                            style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
+                                            style="font-family: Roboto;  font-size: 10px;">Lorem ipsum
+                                            doler sit
                                             amet.</span></p>
                                 </div>
-                                <img src="../icons/request-icons-10.png" height="30px" width="30px" />
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="4"
+                                    onclick="showminus(4)" />
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <p>CANCEL</p>
-                        <button>DONE</button>
+                        <div class="done">
+                            <p>You haven't selected any person</p>
+                            <button>DONE</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <script>
-        var modal = document.getElementById('modal');
-        var closeBtn = document.getElementsByClassName('closeBtn')[0];
-        var addItem = document.getElementById('addItem');
+            <script>
+                var modal = document.getElementById('modal');
+                var closeBtn = document.getElementsByClassName('closeBtn')[0];
+                var addItem = document.getElementById('addItem');
 
-        addItem.addEventListener('click', Openmodal);
-        function Openmodal() {
-            modal.style.display = 'block';
+                addItem.addEventListener('click', Openmodal);
+                function Openmodal() {
+                    modal.style.display = 'block';
 
-        }
-        closeBtn.addEventListener('click', Closemodal);
-        function Closemodal() {
-            modal.style.display = 'none';
-        }
-        function back() {
-            window.location.assign('../Attachments/attachments.html');
-        }
-        function save() {
-            window.location.assign('../Acknowledgement/act.html');
-        }
-        function nextPage() {
-            window.location.assign('../addApprover/addApprover.html');
-        }
+                }
+                closeBtn.addEventListener('click', Closemodal);
+                function Closemodal() {
+                    modal.style.display = 'none';
+                }
 
-    </script>
+                function showminus(id) {
+                    var img = document.getElementById(id);
+                    img.setAttribute('src', '../icons/request-icons-09.png')
+                }
+                function back() {
+                    window.location.assign('inviteaddppl.html');
+                }
+                function save() {
+                    window.location.assign('act.html');
+                }
+                function nextPage() {
+                    window.location.assign('preview.html');
+                }
+            </script>
 </body>
 
 </html>
