@@ -84,9 +84,9 @@
                     </div>
                     <div class="modal-body">
 
-                        <div class="search"><input type="text" id="icon" placeholder="search" />
+                        <div class="search"><input type="text" id="icon" placeholder="search" onclick="search()"/>
                         </div>
-                        <div class="browse1">
+                        <div class="browse1" id="browse1">
                             <div class="card1">
                                 <div class="new1">
                                     <img src="../icons/profile.png" height="40px" width="40px" />
@@ -130,6 +130,11 @@
                                     onclick="showminus(4)" />
                             </div>
                         </div>
+                        <div class="notfound hide" >
+                            <img src="../icons/request-icons-04.png" height="80px" width="80px">
+                            <p>No Results Found</p>
+                            <p>We can’t find any item matching your search</p>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <p onclick="Closemodal()">CANCEL</p>
@@ -144,6 +149,10 @@
                 var modal = document.getElementById('modal');
                 var closeBtn = document.getElementsByClassName('closeBtn')[0];
                 var addItem = document.getElementById('addItem');
+var browse1=document.getElementById('browse1');
+var icon=document.getElementById('icon');
+var hide=document.getElementsByClassName('hide');
+
 
                 addItem.addEventListener('click', Openmodal);
                 function Openmodal() {
@@ -157,7 +166,12 @@
 
                 function showminus(id) {
                     var img = document.getElementById(id);
+                    var src = img.getAttribute('src');
+                    if(src.includes('10'))
                     img.setAttribute('src', '../icons/request-icons-09.png')
+                    else
+                    img.setAttribute('src', '../icons/request-icons-10.png')
+                        
                 }
                 function back() {
                     window.location.assign('inviteaddppl.html');
@@ -167,6 +181,11 @@
                 }
                 function nextPage() {
                     window.location.assign('preview.html');
+                }
+                function search(){
+icon.value='Peter Parker';
+browse1.style.display="none";
+hide[0].style.display="flex";
                 }
             </script>
 </body>
