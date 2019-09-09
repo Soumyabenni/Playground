@@ -139,7 +139,7 @@
                     <div class="modal-footer">
                         <p onclick="Closemodal()">CANCEL</p>
                         <div class="done">
-                            <p>You haven't selected any person</p>
+                            <p id="selected">You haven't selected any person</p>
                             <button onclick="Closemodal()">DONE</button>
                         </div>
                     </div>
@@ -149,9 +149,11 @@
                 var modal = document.getElementById('modal');
                 var closeBtn = document.getElementsByClassName('closeBtn')[0];
                 var addItem = document.getElementById('addItem');
-var browse1=document.getElementById('browse1');
-var icon=document.getElementById('icon');
-var hide=document.getElementsByClassName('hide');
+                var browse1=document.getElementById('browse1');
+                var icon=document.getElementById('icon');
+                var hide=document.getElementsByClassName('hide');
+                var selected=document.getElementById('selected');
+                var count=0;
 
 
                 addItem.addEventListener('click', Openmodal);
@@ -162,15 +164,30 @@ var hide=document.getElementsByClassName('hide');
                 closeBtn.addEventListener('click', Closemodal);
                 function Closemodal() {
                     modal.style.display = 'none';
+                    icon.value="";
+                    browse1.style.display="block";
+                    hide[0].style.display="none";
                 }
 
                 function showminus(id) {
                     var img = document.getElementById(id);
                     var src = img.getAttribute('src');
-                    if(src.includes('10'))
-                    img.setAttribute('src', '../icons/request-icons-09.png')
-                    else
-                    img.setAttribute('src', '../icons/request-icons-10.png')
+                    if(src.includes('10')){
+                      img.setAttribute('src', '../icons/request-icons-09.png')
+                      count++;
+                      selected.innerText= count + ' person selected';
+
+                    }
+                    
+                    else{
+                      img.setAttribute('src', '../icons/request-icons-10.png')
+                      count--;
+                      if(count <= 0)
+                      selected.innerText= "You haven't selected any person";
+                      else
+                      selected.innerText= count + ' person selected';
+                    }
+                    
                         
                 }
                 function back() {

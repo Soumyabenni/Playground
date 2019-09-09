@@ -64,11 +64,27 @@
           </button>
         </div>
       </div>
-    </div>
+      <div class="main1" style="display: none;" id="act">
+          <div class="preview1">
+              <span style="font-family: Roboto; font-weight:bold; font-size: 14px; color:#B5B5B5; letter-spacing: 1.4px;">ACKNOWLEDGEMENT</span>
+             
+              <p style=" font-weight:bold; font-size: 14px;">
+              Your request has been saved as draft.</p>
+      
+              <p style=" font-weight:regular; font-size: 12px; width:70%;">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor vehicula, tortor ipsum
+                  faucibus nunc, id aliquam lacus odio nec magna. Cras a ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper
+                  tempor facilisis.</p>  
+          </div>
+  </div>
+    </div> 
   </div>
   <script>
+    var main=document.getElementsByClassName("main");
+    var main1=document.getElementById("act");
     function myFunction() {
-      window.location.assign("act.html");
+      main[0].style.display="none";
+      main1.style.display="block";
     }
     function myNext() {
       window.location.assign("items.html");
