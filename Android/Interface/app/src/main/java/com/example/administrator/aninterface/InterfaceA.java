@@ -1,5 +1,5 @@
 package com.example.administrator.aninterface;
 
  interface InterfaceA {
-   public demo();
+   public void demo();
 }
