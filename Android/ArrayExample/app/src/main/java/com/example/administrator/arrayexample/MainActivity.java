@@ -33,36 +33,41 @@ public class MainActivity extends AppCompatActivity {
         add=findViewById(R.id.add);
         delete1=findViewById(R.id.delete);
         display=findViewById(R.id.display);
-        text1=findViewById(R.id.text1);
+
         text3=findViewById(R.id.text3);
 
 add.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        arrayList.add("hello");
-       arrayList.add("world");
+       // arrayList.add("hello");
+       //arrayList.add("world");
+        text1=findViewById(R.id.text1);
+        String value = text1.getText().toString();
+       arrayList.add(value);
     }
 });
 
 delete1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        arrayList.remove(0);
+        //arrayList.remove(0);
+        text2=findViewById(R.id.text2);
+        String value = text2.getText().toString();
+        arrayList.remove(value);
+
+
     }
 });
        display.setOnClickListener(new View.OnClickListener() {
  @Override
    public void onClick(View v) {
         for (int i=0; i< arrayList.size(); i++){
-            // Log.d(TAG," gjgvg"+arrayList.get(i));
-            text3.setText(text3.getText() + arrayList.get(i) + "  ");
+           text3.setText(text3.getText() + arrayList.get(i) + "  ");
+
 
         }
     }
 });
-
-
-
 
    }
 }
