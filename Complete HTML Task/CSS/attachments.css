@@ -276,3 +276,16 @@ body {
   font-size: 12px;
   color: white;
 }
+.main1 {
+  width: 100%;
+  margin: 60px 40px 0 40px;
+  background-color: #fcfcfc;
+}
+
+.preview1 p {
+  margin-top: 15px;
+  font-family: Roboto;
+  color: #747474;
+  letter-spacing: 1.4px;
+  line-height: 22px;
+}

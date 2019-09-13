@@ -38,7 +38,7 @@
                         <div class="additems">
                             <span style="font-size: 12px; font-family: Roboto; font-weight: bold; color: #505050;">ADD
                                 APPROVER
-                            </span><img id="addItem" src="../icons/request-icons-10.png" height="50px" width="50px" />
+                            </span><img id="addItem" src="../icons/request-icons-10.png" height="50px" width="50px" style="cursor: pointer;"/>
                         </div>
                     </div>
                     <div class="browse">
@@ -74,6 +74,8 @@
                     </div>
                 </div>
             </div>
+           
+      </div>
             <div id="modal" class="model">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -84,7 +86,7 @@
                     </div>
                     <div class="modal-body">
 
-                        <div class="search"><input type="text" id="icon" placeholder="search" onclick="search()"/>
+                        <div class="search"><input type="text" id="icon" placeholder="search" onclick="search()" style="cursor: pointer;"/>
                         </div>
                         <div class="browse1" id="browse1">
                             <div class="card1">
@@ -137,10 +139,10 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <p onclick="Closemodal()">CANCEL</p>
+                        <p onclick="Closemodal()" style="cursor: pointer;">CANCEL</p>
                         <div class="done">
-                            <p id="selected">You haven't selected any person</p>
-                            <button onclick="Closemodal()">DONE</button>
+                            <p id="selected" style="cursor: pointer;">You haven't selected any person</p>
+                            <button onclick="Closemodal()" style="cursor: pointer;">DONE</button>
                         </div>
                     </div>
                 </div>
@@ -154,6 +156,8 @@
                 var hide=document.getElementsByClassName('hide');
                 var selected=document.getElementById('selected');
                 var count=0;
+
+                
 
 
                 addItem.addEventListener('click', Openmodal);
@@ -176,7 +180,6 @@
                       img.setAttribute('src', '../icons/request-icons-09.png')
                       count++;
                       selected.innerText= count + ' person selected';
-
                     }
                     
                     else{
@@ -186,15 +189,13 @@
                       selected.innerText= "You haven't selected any person";
                       else
                       selected.innerText= count + ' person selected';
-                    }
-                    
-                        
+                    }     
                 }
                 function back() {
                     window.location.assign('inviteaddppl.html');
                 }
                 function save() {
-                    window.location.assign('act.html');
+                    window.location.assign('act5.html');
                 }
                 function nextPage() {
                     window.location.assign('preview.html');

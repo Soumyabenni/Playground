@@ -38,7 +38,7 @@
                         <div class="additems">
                             <span style="font-size: 12px; font-family: Roboto; font-weight: bold; color: #505050;">ADD
                                 PEOPLE</span><img id="addItem" src="../icons/request-icons-10.png" height="50px"
-                                width="50px" />
+                                width="50px" style="cursor: pointer;" />
                         </div>
                     </div>
                     <div class="browse">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="last">
-                    <p onclick="save()"
+                    <p onclick="myFunction()"
                         style="font-family: Roboto; font-weight:600; font-size: 12px; color:#595959; cursor: pointer;">
                         SAVE DRAFT</p>
                     <div>
@@ -83,6 +83,19 @@
                     </div>
                 </div>
             </div>
+            <div class="main1" style="display: none;" id="act">
+                <div class="preview1">
+                    <span style="font-family: Roboto; font-weight:bold; font-size: 14px; color:#B5B5B5; letter-spacing: 1.4px;">ACKNOWLEDGEMENT</span>
+                   
+                    <p style=" font-weight:bold; font-size: 14px;">
+                    Your request has been saved as draft.</p>
+            
+                    <p style=" font-weight:regular; font-size: 12px; width:70%;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor vehicula, tortor ipsum
+                        faucibus nunc, id aliquam lacus odio nec magna. Cras a ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper
+                        tempor facilisis.</p>  
+                </div>
+        </div>
             <div id="modal" class="model">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -93,7 +106,7 @@
                     </div>
                     <div class="modal-body">
 
-                        <div class="search"><input type="text" id="icon" placeholder="search" />
+                        <div class="search"><input type="text" id="icon" placeholder="search" style="cursor: pointer;" onclick="search()"/>
                         </div>
                         <div class="browse1">
                             <div class="card1">
@@ -137,13 +150,19 @@
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="4"
                                 onclick="showminus(4)"/>
                             </div>
+                            
+                        </div>
+                        <div class="notfound hide" >
+                            <img src="../icons/request-icons-04.png" height="80px" width="80px">
+                            <p>No Results Found</p>
+                            <p>We can’t find any item matching your search</p>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <p onclick="Closemodal()">CANCEL</p>
+                        <p onclick="Closemodal()" style="cursor: pointer;">CANCEL</p>
                         <div class="done">
-                            <p>You haven't selected any person</p>
-                            <button onclick="Closemodal()">DONE</button>
+                            <p id="selected" style="cursor: pointer;">You haven't selected any person</p>
+                            <button onclick="Closemodal()" style="cursor: pointer;">DONE</button>
                         </div>
                     </div>
                 </div>
@@ -154,29 +173,59 @@
         var modal = document.getElementById('modal');
         var closeBtn = document.getElementsByClassName('closeBtn')[0];
         var addItem = document.getElementById('addItem');
+        var browse1=document.getElementById('browse1');
+                var icon=document.getElementById('icon');
+        var hide=document.getElementsByClassName('hide');
+                var selected=document.getElementById('selected');
+                var count=0;
 
         addItem.addEventListener('click', Openmodal);
+
+       
         function Openmodal() {
             modal.style.display = 'block';
 
         }
         closeBtn.addEventListener('click', Closemodal);
         function Closemodal() {
-            modal.style.display = 'none';
-        }
+                    modal.style.display = 'none';
+                    icon.value="";
+                    browse1.style.display="block";
+                    hide[0].style.display="none";
+                }
         function showminus(id) {
                     var img = document.getElementById(id);
-                    img.setAttribute('src', '../icons/request-icons-09.png')
+                    var src = img.getAttribute('src');
+                    if(src.includes('10')){
+                      img.setAttribute('src', '../icons/request-icons-09.png')
+                      count++;
+                      selected.innerText= count + ' person selected';
+                    }
+                    
+                    else{
+                      img.setAttribute('src', '../icons/request-icons-10.png')
+                      count--;
+                      if(count <= 0)
+                      selected.innerText= "You haven't selected any person";
+                      else
+                      selected.innerText= count + ' person selected';
+                    }     
                 }
         function back() {
             window.location.assign('attachments.html');
         }
         function save() {
-            window.location.assign('act.html');
+            window.location.assign('act4.html');
         }
         function nextPage() {
             window.location.assign('addApprover.html');
         }
+
+        function search(){
+icon.value='Peter Parker';
+browse1.style.display="none";
+hide[0].style.display="flex";
+                }
 
     </script>
 </body>
