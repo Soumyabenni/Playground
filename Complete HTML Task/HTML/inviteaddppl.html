@@ -150,6 +150,16 @@
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="4"
                                 onclick="showminus(4)"/>
                             </div>
+                            <div class="card1">
+                                <div class="new1">
+                                    <img src="../icons/profile.png" height="40px" width="40px" />
+                                    <p><span style="font-family: Roboto;  font-size: 12px;">Peter Dinklage</span><br /><span
+                                            style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
+                                            amet.</span></p>
+                                </div>
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="5"
+                                onclick="showminus(5)"/>
+                            </div>
                             
                         </div>
                         <div class="notfound hide" >
@@ -173,11 +183,12 @@
         var modal = document.getElementById('modal');
         var closeBtn = document.getElementsByClassName('closeBtn')[0];
         var addItem = document.getElementById('addItem');
-        var browse1=document.getElementById('browse1');
-                var icon=document.getElementById('icon');
+        var browse1=document.getElementsByClassName('browse1');
+        var icon=document.getElementById('icon');
         var hide=document.getElementsByClassName('hide');
-                var selected=document.getElementById('selected');
-                var count=0;
+        var selected=document.getElementById('selected');
+        var count=0;
+        var card=document.getElementsByClassName('card1');
 
         addItem.addEventListener('click', Openmodal);
 
@@ -190,8 +201,12 @@
         function Closemodal() {
                     modal.style.display = 'none';
                     icon.value="";
-                    browse1.style.display="block";
+                    browse1[0].style.display="block";
                     hide[0].style.display="none";
+                    for(var i=0;i<card.length-1;i++)
+                {
+                    card[i].style.display = 'flex';
+                } 
                 }
         function showminus(id) {
                     var img = document.getElementById(id);
@@ -222,11 +237,21 @@
         }
 
         function search(){
+            if(icon.value === 'Peter Parker'){
+                icon.value='Peter Dinklage';
+                browse1[0].style.display="block";
+                hide[0].style.display="none";
+                for(var i=0;i<card.length-1;i++)
+                {
+                    card[i].style.display = 'none';
+                }
+            }
+            else{
 icon.value='Peter Parker';
-browse1.style.display="none";
+browse1[0].style.display="none";
 hide[0].style.display="flex";
                 }
-
+        }
     </script>
 </body>
 

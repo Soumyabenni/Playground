@@ -22,7 +22,8 @@
         </nav>
         <div class="container">
             <div class="top-header">
-                <p style="font-family: Roboto; font-weight:bold; font-size: 16px;">REQUISITION </p><img
+                <p style="font-family: Roboto; font-weight:bold; font-size: 14px; letter-spacing: 2.8px;">REQUISITION
+                </p><img
                     src="../icons/request-image-34.png" width="75%" height="65%" />
             </div>
             <div class="invite">
@@ -131,6 +132,16 @@
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="4"
                                     onclick="showminus(4)" />
                             </div>
+                            <div class="card1">
+                                <div class="new1">
+                                    <img src="../icons/profile.png" height="40px" width="40px" />
+                                    <p><span style="font-family: Roboto;  font-size: 12px;">Peter Dinklage</span><br /><span
+                                            style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
+                                            amet.</span></p>
+                                </div>
+                                <img src="../icons/request-icons-10.png" height="30px" width="30px" id="5"
+                                onclick="showminus(5)"/>
+                            </div>
                         </div>
                         <div class="notfound hide" >
                             <img src="../icons/request-icons-04.png" height="80px" width="80px">
@@ -156,7 +167,7 @@
                 var hide=document.getElementsByClassName('hide');
                 var selected=document.getElementById('selected');
                 var count=0;
-
+                var card=document.getElementsByClassName('card1');
                 
 
 
@@ -171,6 +182,10 @@
                     icon.value="";
                     browse1.style.display="block";
                     hide[0].style.display="none";
+                    for(var i=0;i<card.length-1;i++)
+                {
+                    card[i].style.display = 'flex';
+                } 
                 }
 
                 function showminus(id) {
@@ -201,9 +216,22 @@
                     window.location.assign('preview.html');
                 }
                 function search(){
-icon.value='Peter Parker';
-browse1.style.display="none";
-hide[0].style.display="flex";
+                    if(icon.value === 'Peter Parker'){
+                icon.value='Peter Dinklage';
+                browse1.style.display="block";
+                hide[0].style.display="none";
+                for(var i=0;i<card.length-1;i++)
+                {
+                    card[i].style.display = 'none';
+                }
+            }
+            else{
+
+            
+                icon.value='Peter Parker';
+                browse1.style.display="none";
+                hide[0].style.display="flex";
+                }
                 }
             </script>
 </body>
