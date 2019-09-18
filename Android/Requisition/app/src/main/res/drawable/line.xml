@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line"
+    >
+<stroke android:color="#a4a2a2"
+   android:dashGap="4dp"
+    android:dashWidth="5dp"
+    android:width="2dp"></stroke>
+
+</shape>
