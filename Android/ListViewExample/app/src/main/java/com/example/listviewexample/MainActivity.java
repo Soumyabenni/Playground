@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                RequestModel request = requestModels.get(i);
 
 
-//String TempListView=requestModels.toString();
                Intent intent=new Intent(getApplicationContext(),RequestView.class);
                Bundle requestDataBundle = new Bundle();
                requestDataBundle.putString("RequestNo", request.getRequestNumber());
