@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        button=findViewById(R.id.button);
+        button=findViewById(R.id.buttonLogin);
         t1=findViewById(R.id.t1);
         t2=findViewById(R.id.t2);
         w1=findViewById(R.id.w1);
