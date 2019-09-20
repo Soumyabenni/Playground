@@ -2,47 +2,83 @@ package com.example.listviewexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-
+import com.example.listviewexample.Global.RequestStatus;
+import com.example.listviewexample.Global.RequestStatus;
+import com.example.listviewexample.Model.RequestModel;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
 
-    ArrayList<String> arrayList,arrayList1,arrayList2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         listView =findViewById(R.id.listView1);
 
 
-        arrayList=new ArrayList<>();
-        arrayList1=new ArrayList<>();
-        arrayList2=new ArrayList<>();
+        final ArrayList<RequestModel> requestModels =new ArrayList<>();
+        RequestModel requestmodel = new RequestModel();
 
-arrayList.add("PUR - 2019 - 056");
-arrayList.add("PUR - 2019 - 057");
-arrayList.add("PUR - 2019 - 058");
 
-arrayList1.add("06 Jul 2019");
-arrayList1.add("06 Aug 2019");
-arrayList1.add("06 sep 2019");
+        requestmodel.setRequestNumber("PUR - 2019 - 056");
+        requestmodel.setDescription("06 Jul 2019");
+        requestmodel.setRequestStatus(RequestStatus.APPROVED);
+        requestModels.add(requestmodel);
 
-arrayList2.add("APPROVED");
-arrayList2.add("REJECTED");
-arrayList2.add("DRAFT");
+//        String S = requestmodel.getDescription();
+//        System.out.println("tag" + S);
 
-        ListAdapter adaptorfile=new AdaptorFile(getApplicationContext(),arrayList,arrayList1,arrayList2);
+        requestmodel = new RequestModel();
+        requestmodel.setRequestNumber("PUR - 2019 - 057");
+        requestmodel.setDescription("07 Jul 2019");
+        requestmodel.setRequestStatus(RequestStatus.AWAITING_ACTIVITY);
+        requestModels.add(requestmodel);
+
+        requestmodel = new RequestModel();
+        requestmodel.setRequestNumber("PUR - 2019 - 058");
+        requestmodel.setDescription("07 Aug 2019");
+        requestmodel.setRequestStatus(RequestStatus.DRAFT);
+        requestModels.add(requestmodel);
+
+        requestmodel = new RequestModel();
+        requestmodel.setRequestNumber("PUR - 2019 - 059");
+        requestmodel.setDescription("07 Sep 2019");
+        requestmodel.setRequestStatus(RequestStatus.REJECTED);
+        requestModels.add(requestmodel);
+
+
+
+        ListAdapter adaptorfile=new AdaptorFile(getApplicationContext(),requestModels);
         listView.setAdapter(adaptorfile);
 
+       listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           @Override
+           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+               RequestModel request = requestModels.get(i);
 
 
+//String TempListView=requestModels.toString();
+               Intent intent=new Intent(getApplicationContext(),RequestView.class);
+               Bundle requestDataBundle = new Bundle();
+               requestDataBundle.putString("RequestNo", request.getRequestNumber());
+               requestDataBundle.putString("RequestDescription", request.getDescription());
+               requestDataBundle.putString("RequestStatus", request.getRequestStatus().toString());
 
+               intent.putExtra("request",requestDataBundle);
+               startActivity(intent);
+           }
+       });
     }
 }

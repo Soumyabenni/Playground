@@ -1,60 +1,61 @@
 package com.example.listviewexample;
 
 import android.content.Context;
+import android.content.Intent;
+import android.location.Location;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import com.example.listviewexample.Model.RequestModel;
 
 import java.util.ArrayList;
 
 class AdaptorFile extends BaseAdapter {
-    ArrayList<String> arrayslist,arraysList1,arraysList2;
-private Context context;
+    private Context context;
+    ArrayList<RequestModel> requestModel;
 
-    public AdaptorFile(Context context, ArrayList<String> arrayList, ArrayList<String> arrayList1, ArrayList<String> arrayList2) {
-this.context=context;
-this.arrayslist=arrayList;
-this.arraysList1=arrayList1;
-this.arraysList2=arrayList2;
+    public AdaptorFile(Context context, ArrayList<RequestModel> requestModels) {
+    this.context=context;
+    this.requestModel=requestModels;
     }
 
     @Override
     public int getCount() {
-        return arrayslist.size();
+        return requestModel.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return i;
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View view1= LayoutInflater.from(context).inflate(R.layout.listitems,viewGroup,false);
 
-        TextView textView,textView1,textView2;
-        ImageView imageView;
+        TextView items,dates,approval;
+        ImageView notificationimage;
 
-textView=view1.findViewById(R.id.textView);
-textView1=view1.findViewById(R.id.textView3);
-textView2=view1.findViewById(R.id.textView4);
-imageView=view1.findViewById(R.id.notification);
+        items=view1.findViewById(R.id.items);
+        dates=view1.findViewById(R.id.date);
+        approval=view1.findViewById(R.id.approved);
+        notificationimage=view1.findViewById(R.id.notification);
 
-textView.setText(arrayslist.get(i));
-textView1.setText(arraysList1.get(i));
-textView2.setText(arraysList2.get(i));
-imageView.setImageResource(R.drawable.notification);
+        RequestModel requestModel = this.requestModel.get(i);
+        items.setText(String.valueOf(requestModel.getRequestNumber()));
+        dates.setText(String.valueOf(requestModel.getDescription()));
+        approval.setText(String.valueOf(requestModel.getRequestStatus()));
+        notificationimage.setImageResource(R.drawable.notification);
 
-
-        return view1;
+   return view1;
     }
 }
