@@ -6,69 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".RequestView">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="215dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="80dp"
+        android:text="Intent Page for Selected data "
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/items"
-            android:layout_width="184dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="72dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:ems="10"
-            android:hint="Get ur text here"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.446"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heading" />
+    <TextView
+        android:id="@+id/items"
+        android:layout_width="184dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Get ur text here"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
 
-        <TextView
-            android:id="@+id/heading"
-            android:layout_width="215dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="80dp"
-            android:text="Intent Page for Selected data "
-            android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/submission"
+        android:layout_width="199dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Submitted on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/items" />
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="199dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/items" />
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="197dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submission" />
 
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="197dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="190dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="82dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notification" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
