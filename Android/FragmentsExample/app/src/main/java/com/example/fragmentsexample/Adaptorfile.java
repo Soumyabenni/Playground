@@ -15,6 +15,8 @@ import java.util.ArrayList;
 public class Adaptorfile extends BaseAdapter {
     private Context context;
     ArrayList<Requestmodel> requestModel;
+    TextView items,dates,approval;
+    ImageView notificationimage;
 
     public Adaptorfile(Context context, ArrayList<Requestmodel> requestModels) {
         this.context=context;
@@ -41,8 +43,6 @@ public class Adaptorfile extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View view1= LayoutInflater.from(context).inflate(R.layout.listitems,viewGroup,false);
 
-        TextView items,dates,approval;
-        ImageView notificationimage;
 
         items=view1.findViewById(R.id.itemsdescription);
         dates=view1.findViewById(R.id.date);

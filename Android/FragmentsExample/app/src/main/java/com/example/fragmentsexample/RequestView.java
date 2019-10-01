@@ -1,38 +1,47 @@
 package com.example.fragmentsexample;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
 
+import com.example.fragmentsexample.Model.Requestmodel;
+
+import java.util.ArrayList;
 
 
 public class RequestView extends Fragment {
-View root;
+
+    TextView items,date,status;
+
+    Requestmodel requestmodel;
+    private View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_request_view, container, false);
+        view = inflater.inflate(R.layout.fragment_request_view, container, false);
 
-       // View root; = somehowCreateView();
 
-        /*here is an implementation*/
+        items=view.findViewById(R.id.itemsdescription);
+        date=view.findViewById(R.id.date);
+        status=view.findViewById(R.id.status);
 
-//        root.setOnTouchListener(new View.OnClickListener() {
-//            public boolean onTouch(View v, MotionEvent event) {
-//                return true;
-//            }
-//        });
 
-        // Inflate the layout for this fragment
+        items.setText(requestmodel.getDescription());
+        date.setText(requestmodel.getRequestNumber());
+        status.setText(requestmodel.getRequestStatus().toString());
+
+
+        return view;
 
 
     }
 
+    public void setData(Requestmodel requestmodel) {
+         this.requestmodel=requestmodel;
+
+    }
 }
