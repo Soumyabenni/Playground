@@ -1,28 +1,21 @@
 package com.example.fragmentsexample;
 
-import android.content.Intent;
+
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import com.example.fragmentsexample.Delegates.RequestDelegate;
 import com.example.fragmentsexample.Global.RequestStatus;
 import com.example.fragmentsexample.Model.Requestmodel;
-
 import java.util.ArrayList;
 
 
 public class RequestList extends Fragment {
-
-//    TextView items,date,status;
 
 ListView listView;
 private View view;
@@ -38,17 +31,6 @@ private View view;
         final ArrayList<Requestmodel> requestModels =new ArrayList<>();
         Requestmodel requestmodel = new Requestmodel();
 
-
-
-//        items=view.findViewById(R.id.itemsdescription);
-//        date=view.findViewById(R.id.date);
-//        status=view.findViewById(R.id.status);
-//        listView=view.findViewById(R.id.listView1);
-//
-//
-//        items.setText(requestmodel.getDescription());
-//        date.setText(requestmodel.getRequestNumber());
-//        status.setText(requestmodel.getRequestStatus().toString());
 
         requestmodel.setRequestNumber("PUR - 2019 - 056");
         requestmodel.setDescription("06 Jul 2019");
@@ -93,9 +75,5 @@ private View view;
     public void setRequestDelegate(RequestDelegate requestDelegate){
         this.requestDelegate = requestDelegate;
     }
-//public void setData(Requestmodel requestmodel) {
-  //  this.requestmodel=requestmodel;
-
-//}
 
 }

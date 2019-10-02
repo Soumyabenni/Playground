@@ -5,13 +5,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.TextView;
-
 import com.example.fragmentsexample.Model.Requestmodel;
-
-import java.util.ArrayList;
-
 
 public class RequestView extends Fragment {
 
@@ -29,19 +24,15 @@ public class RequestView extends Fragment {
         date=view.findViewById(R.id.date);
         status=view.findViewById(R.id.status);
 
-
         items.setText(requestmodel.getDescription());
         date.setText(requestmodel.getRequestNumber());
         status.setText(requestmodel.getRequestStatus().toString());
 
-
         return view;
-
 
     }
 
     public void setData(Requestmodel requestmodel) {
          this.requestmodel=requestmodel;
-
     }
 }

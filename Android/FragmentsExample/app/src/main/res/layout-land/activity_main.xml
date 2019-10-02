@@ -10,20 +10,17 @@
     tools:context=".MainActivity">
 
 
-    <fragment
-        android:id="@+id/fragment1"
-        android:name="com.example.fragmentsexample.RequestList"
-        android:layout_width="183dp"
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_request_list" />
+        android:layout_weight=".5" />
 
-    <fragment
-        android:id="@+id/fragment3"
-        android:name="com.example.fragmentsexample.BlankFragment"
-        android:layout_width="246dp"
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_request_view" />
+        android:layout_weight=".5"
+        android:orientation="vertical" />
 
 </LinearLayout>

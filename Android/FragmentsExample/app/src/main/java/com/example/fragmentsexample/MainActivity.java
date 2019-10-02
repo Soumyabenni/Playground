@@ -19,13 +19,40 @@ public class MainActivity extends AppCompatActivity implements RequestDelegate {
 
         RequestList requestList=new RequestList();
         requestList.setRequestDelegate(this);
-        //requestList.setData(this);
         FragmentManager FragmentManager=getSupportFragmentManager();
         FragmentTransaction FragmentTransaction=FragmentManager.beginTransaction();
-        FragmentTransaction.add(R.id.fragment1,requestList);
+        FragmentTransaction.add(R.id.frame1,requestList);
         FragmentTransaction.commit();
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration .ORIENTATION_LANDSCAPE){
+            RequestView requestView=new RequestView();
+            FragmentManager FragmentManager=getSupportFragmentManager();
+            FragmentTransaction FragmentTransaction=FragmentManager.beginTransaction();
+            FragmentTransaction.replace(R.id.linear2,requestView);
+            FragmentTransaction.addToBackStack(null);
+            FragmentTransaction.commit();
+        }
+        else if(newConfig.orientation == Configuration .ORIENTATION_PORTRAIT){
+            RequestView requestView=new RequestView();
+            FragmentManager FragmentManager=getSupportFragmentManager();
+            FragmentTransaction FragmentTransaction=FragmentManager.beginTransaction();
+            FragmentTransaction.replace(R.id.frame1,requestView);
+            FragmentTransaction.addToBackStack(null);
+            FragmentTransaction.commit();
+        }
+        else{
+            RequestView requestView=new RequestView();
+            FragmentManager FragmentManager=getSupportFragmentManager();
+            FragmentTransaction FragmentTransaction=FragmentManager.beginTransaction();
+            FragmentTransaction.replace(R.id.linear2,requestView);
+            FragmentTransaction.addToBackStack(null);
+            FragmentTransaction.commit();
+        }
+    }
 
     @Override
     public void onClickRequestDelegate(Requestmodel requestmodel) {
@@ -33,10 +60,9 @@ public class MainActivity extends AppCompatActivity implements RequestDelegate {
         int newConfig =this.getResources().getConfiguration().orientation;
         if(newConfig == Configuration.ORIENTATION_PORTRAIT){
             RequestView requestView=new RequestView();
-          //  Fragment requestView1=new RequestView();
             FragmentManager FragmentManager=getSupportFragmentManager();
             FragmentTransaction FragmentTransaction=FragmentManager.beginTransaction();
-            FragmentTransaction.replace(R.id.fragment1,requestView);
+            FragmentTransaction.replace(R.id.frame1,requestView);
             FragmentTransaction.addToBackStack(null);
             FragmentTransaction.commit();
 
@@ -47,10 +73,9 @@ public class MainActivity extends AppCompatActivity implements RequestDelegate {
         else
             {
             RequestView requestView=new RequestView();
-           // Fragment requestView1=new RequestView();
             FragmentManager FragmentManager=getSupportFragmentManager();
             FragmentTransaction FragmentTransaction=FragmentManager.beginTransaction();
-            FragmentTransaction.replace(R.id.fragment3,requestView);
+            FragmentTransaction.replace(R.id.linear2,requestView);
             FragmentTransaction.addToBackStack(null);
             FragmentTransaction.commit();
 
