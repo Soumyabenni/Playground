@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".FragmentPreview">
 
-<!--    <ScrollView-->
-<!--        android:layout_width="308dp"-->
-<!--        android:layout_height="1160dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:context=".FragmentPreview">-->
-
        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -144,15 +136,16 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
            <androidx.constraintlayout.widget.ConstraintLayout
-               android:layout_width="match_parent"
-               android:layout_height="2207dp"
+               android:id="@+id/constraintMain"
+               android:layout_width="391dp"
+               android:layout_height="2446dp"
                app:layout_constraintEnd_toEndOf="parent"
                app:layout_constraintHorizontal_bias="0.454"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
                <TextView
-                   android:id="@+id/textView13"
+                   android:id="@+id/marksmith"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -161,11 +154,11 @@
                    android:text="Mark Smith"
                    android:textColor="#505050"
                    android:textSize="12sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView3"
-                   app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                   app:layout_constraintStart_toEndOf="@+id/markpicture"
+                   app:layout_constraintTop_toBottomOf="@+id/daisyText" />
 
                <TextView
-                   android:id="@+id/fragmentPreview"
+                   android:id="@+id/preview"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="40dp"
@@ -189,7 +182,7 @@
                    android:textColor="#747474"
                    android:textSize="12sp"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/fragmentPreview"
+                   app:layout_constraintTop_toBottomOf="@+id/preview"
                    app:lineHeight="20dp" />
 
                <TextView
@@ -265,7 +258,7 @@
                    app:layout_constraintTop_toBottomOf="@+id/listitems1" />
 
                <TextView
-                   android:id="@+id/textView2"
+                   android:id="@+id/itemnum1"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="40dp"
@@ -299,7 +292,7 @@
                    android:layout_marginTop="24dp"
                    android:text="976 KB"
                    android:textSize="12sp"
-                   app:layout_constraintStart_toEndOf="@+id/textView2"
+                   app:layout_constraintStart_toEndOf="@+id/itemnum1"
                    app:layout_constraintTop_toBottomOf="@+id/attachments" />
 
                <TextView
@@ -342,7 +335,7 @@
                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                <TextView
-                   android:id="@+id/textView8"
+                   android:id="@+id/invitees"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="40dp"
@@ -354,7 +347,7 @@
                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                <TextView
-                   android:id="@+id/textView9"
+                   android:id="@+id/lukeray"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -363,11 +356,11 @@
                    android:text="Luke Ray"
                    android:textColor="#505050"
                    android:textSize="12sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView"
-                   app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                   app:layout_constraintStart_toEndOf="@+id/lukepic"
+                   app:layout_constraintTop_toBottomOf="@+id/invitees" />
 
                <TextView
-                   android:id="@+id/textView10"
+                   android:id="@+id/lukeText"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -376,11 +369,11 @@
                    android:text="Lorem ipsum doler sit amet."
                    android:textColor="#505050"
                    android:textSize="10sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView"
-                   app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                   app:layout_constraintStart_toEndOf="@+id/lukepic"
+                   app:layout_constraintTop_toBottomOf="@+id/lukeray" />
 
                <ImageView
-                   android:id="@+id/imageView"
+                   android:id="@+id/lukepic"
                    android:layout_width="50dp"
                    android:layout_height="50dp"
                    android:layout_marginStart="40dp"
@@ -388,10 +381,10 @@
                    android:layout_marginTop="28dp"
                    android:src="@drawable/profile"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                   app:layout_constraintTop_toBottomOf="@+id/invitees" />
 
                <ImageView
-                   android:id="@+id/imageView2"
+                   android:id="@+id/daisypic"
                    android:layout_width="50dp"
                    android:layout_height="50dp"
                    android:layout_marginStart="40dp"
@@ -399,10 +392,10 @@
                    android:layout_marginTop="32dp"
                    android:src="@drawable/profile"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                   app:layout_constraintTop_toBottomOf="@+id/lukepic" />
 
                <TextView
-                   android:id="@+id/textView11"
+                   android:id="@+id/daisylake"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -411,11 +404,11 @@
                    android:text="Daisy Lake"
                    android:textColor="#505050"
                    android:textSize="12sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView2"
-                   app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                   app:layout_constraintStart_toEndOf="@+id/daisypic"
+                   app:layout_constraintTop_toBottomOf="@+id/lukeText" />
 
                <TextView
-                   android:id="@+id/textView12"
+                   android:id="@+id/daisyText"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -424,11 +417,11 @@
                    android:text="Lorem ipsum doler sit amet."
                    android:textColor="#505050"
                    android:textSize="10sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView2"
-                   app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                   app:layout_constraintStart_toEndOf="@+id/daisypic"
+                   app:layout_constraintTop_toBottomOf="@+id/daisylake" />
 
                <ImageView
-                   android:id="@+id/imageView3"
+                   android:id="@+id/markpicture"
                    android:layout_width="50dp"
                    android:layout_height="50dp"
                    android:layout_marginStart="40dp"
@@ -436,10 +429,10 @@
                    android:layout_marginTop="32dp"
                    android:src="@drawable/profile"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                   app:layout_constraintTop_toBottomOf="@+id/daisypic" />
 
                <TextView
-                   android:id="@+id/textView14"
+                   android:id="@+id/markText"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -448,11 +441,11 @@
                    android:text="Lorem ipsum doler sit amet."
                    android:textColor="#505050"
                    android:textSize="10sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView3"
-                   app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                   app:layout_constraintStart_toEndOf="@+id/markpicture"
+                   app:layout_constraintTop_toBottomOf="@+id/marksmith" />
 
                <TextView
-                   android:id="@+id/textView15"
+                   android:id="@+id/approvals"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="40dp"
@@ -461,10 +454,10 @@
                    android:text="APPROVAL(S)"
                    android:textColor="#000000"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                   app:layout_constraintTop_toBottomOf="@+id/markpicture" />
 
                <ImageView
-                   android:id="@+id/imageView4"
+                   android:id="@+id/johnpic"
                    android:layout_width="50dp"
                    android:layout_height="50dp"
                    android:layout_marginStart="40dp"
@@ -472,10 +465,10 @@
                    android:layout_marginTop="28dp"
                    android:src="@drawable/profile"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                   app:layout_constraintTop_toBottomOf="@+id/approvals" />
 
                <TextView
-                   android:id="@+id/textView16"
+                   android:id="@+id/johncampbell"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -484,11 +477,11 @@
                    android:text="John Campbell"
                    android:textColor="#505050"
                    android:textSize="12sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView4"
-                   app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                   app:layout_constraintStart_toEndOf="@+id/johnpic"
+                   app:layout_constraintTop_toBottomOf="@+id/approvals" />
 
                <TextView
-                   android:id="@+id/textView17"
+                   android:id="@+id/johnText"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -497,11 +490,11 @@
                    android:text="Lorem ipsum doler sit amet."
                    android:textColor="#505050"
                    android:textSize="10sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView4"
-                   app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                   app:layout_constraintStart_toEndOf="@+id/johnpic"
+                   app:layout_constraintTop_toBottomOf="@+id/johncampbell" />
 
                <TextView
-                   android:id="@+id/textView18"
+                   android:id="@+id/kategill"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -510,11 +503,11 @@
                    android:text="Kate Gill"
                    android:textColor="#505050"
                    android:textSize="12sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView6"
-                   app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                   app:layout_constraintStart_toEndOf="@+id/katepic"
+                   app:layout_constraintTop_toBottomOf="@+id/johnText" />
 
                <TextView
-                   android:id="@+id/textView19"
+                   android:id="@+id/kateText"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="16dp"
@@ -523,11 +516,11 @@
                    android:text="Lorem ipsum doler sit amet."
                    android:textColor="#505050"
                    android:textSize="10sp"
-                   app:layout_constraintStart_toEndOf="@+id/imageView6"
-                   app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                   app:layout_constraintStart_toEndOf="@+id/katepic"
+                   app:layout_constraintTop_toBottomOf="@+id/kategill" />
 
                <ImageView
-                   android:id="@+id/imageView6"
+                   android:id="@+id/katepic"
                    android:layout_width="50dp"
                    android:layout_height="50dp"
                    android:layout_marginStart="40dp"
@@ -535,11 +528,36 @@
                    android:layout_marginTop="32dp"
                    android:src="@drawable/profile"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                   app:layout_constraintTop_toBottomOf="@+id/johnpic" />
+
+               <TextView
+                   android:id="@+id/savedraft"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40dp"
+                   android:layout_marginLeft="40dp"
+                   android:layout_marginTop="50dp"
+                   android:text="SAVE DRAFT"
+                   android:textColor="#505050"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/katepic" />
+
+               <Button
+                   android:id="@+id/submitButton"
+                   android:layout_width="96dp"
+                   android:layout_height="25dp"
+                   android:layout_marginStart="104dp"
+                   android:layout_marginLeft="104dp"
+                   android:layout_marginTop="56dp"
+                   android:background="@drawable/blueradius"
+                   android:text="SUBMIT"
+                   android:textColor="#FFFFFF"
+                   app:layout_constraintStart_toEndOf="@+id/savedraft"
+                   app:layout_constraintTop_toBottomOf="@+id/kateText" />
 
 
            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+       </LinearLayout>
 <!--    </ScrollView>-->
 
 </ScrollView>

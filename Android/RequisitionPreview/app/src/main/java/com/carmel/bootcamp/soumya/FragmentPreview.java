@@ -1,15 +1,16 @@
 package com.carmel.bootcamp.soumya;
 
-
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import com.carmel.bootcamp.soumya.Delegate.RequestDelegate;
 import com.carmel.bootcamp.soumya.Model.RequestModel;
-
 import java.util.ArrayList;
 
 
@@ -17,6 +18,9 @@ public class FragmentPreview extends Fragment {
 
     private View view;
     ListView listView;
+    Button submitButton;
+    TextView savedraft;
+    RequestDelegate requestDelegate;
 
 
     @Override
@@ -26,6 +30,8 @@ public class FragmentPreview extends Fragment {
         view = inflater.inflate(R.layout.fragment_preview, container, false);
 
         listView = view.findViewById(R.id.listitems1);
+        submitButton = view.findViewById(R.id.submitButton);
+        savedraft = view.findViewById(R.id.savedraft);
 
         final ArrayList<RequestModel> requestModels = new ArrayList<>();
         RequestModel requestModel = new RequestModel();
@@ -54,12 +60,34 @@ public class FragmentPreview extends Fragment {
         requestModel.setRequestdescription("daptec 128 MB Raid Controller Pair. Pci-e SAS/SATA");
         requestModels.add(requestModel);
 
-        ListAdapter adapter = new RequestAdaptor(view.getContext(), requestModels);
+        ListAdapter adapter = new RequestAdapter(view.getContext(), requestModels);
         listView.setAdapter(adapter);
 
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (requestDelegate != null) {
+                    requestDelegate.onClickSubmit(requestDelegate);
+
+                }
+            }
+        });
+
+        savedraft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(requestDelegate != null){
+                    requestDelegate.onClickSaveDraft(requestDelegate);
+                }
+            }
+        });
 
         return view;
     }
 
+    public void setRequestDelegate(RequestDelegate requestDelegate) {
+        this.requestDelegate = requestDelegate;
+    }
 
 }
