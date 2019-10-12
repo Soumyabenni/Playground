@@ -1,6 +1,7 @@
 package com.carmel.bootcamp.soumya;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +20,11 @@ public class RequestAdapter extends BaseAdapter {
     public RequestAdapter(Context context, ArrayList<RequestModel> requestModels) {
         this.context = context;
         this.requestModels = requestModels;
-
     }
 
     @Override
     public int getCount() {
+        Log.d("TAG","getcount " +requestModels.size());
         return requestModels.size();
     }
 

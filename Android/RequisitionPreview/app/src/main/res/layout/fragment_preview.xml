@@ -137,8 +137,8 @@
 
            <androidx.constraintlayout.widget.ConstraintLayout
                android:id="@+id/constraintMain"
-               android:layout_width="391dp"
-               android:layout_height="2446dp"
+               android:layout_width="377dp"
+               android:layout_height="2291dp"
                app:layout_constraintEnd_toEndOf="parent"
                app:layout_constraintHorizontal_bias="0.454"
                app:layout_constraintStart_toStartOf="parent"
@@ -236,10 +236,10 @@
                    app:layout_constraintTop_toBottomOf="@+id/noteRequest" />
 
                <ListView
-                   android:id="@+id/listitems1"
+                   android:id="@+id/listView1"
                    android:layout_width="362dp"
                    android:layout_height="1076dp"
-                   android:layout_marginTop="32dp"
+                   android:layout_marginTop="16dp"
                    app:layout_constraintEnd_toEndOf="parent"
                    app:layout_constraintHorizontal_bias="0.142"
                    app:layout_constraintStart_toStartOf="parent"
@@ -255,7 +255,7 @@
                    android:text="ATTACHMENTS"
                    android:textColor="#000000"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/listitems1" />
+                   app:layout_constraintTop_toBottomOf="@+id/listView1" />
 
                <TextView
                    android:id="@+id/itemnum1"
@@ -530,34 +530,43 @@
                    app:layout_constraintStart_toStartOf="parent"
                    app:layout_constraintTop_toBottomOf="@+id/johnpic" />
 
-               <TextView
-                   android:id="@+id/savedraft"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="85dp"
+                   android:layout_height="27dp"
                    android:layout_marginStart="40dp"
                    android:layout_marginLeft="40dp"
                    android:layout_marginTop="50dp"
-                   android:text="SAVE DRAFT"
-                   android:textColor="#505050"
+                   android:background="@drawable/textunderline"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/katepic" />
+                   app:layout_constraintTop_toBottomOf="@+id/katepic">
+
+                   <TextView
+                       android:id="@+id/savedraft"
+                       android:layout_width="85dp"
+                       android:layout_height="19dp"
+                       android:text="SAVE DRAFT"
+                       android:textColor="#505050"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                <Button
                    android:id="@+id/submitButton"
                    android:layout_width="96dp"
                    android:layout_height="25dp"
-                   android:layout_marginStart="104dp"
-                   android:layout_marginLeft="104dp"
                    android:layout_marginTop="56dp"
+                   android:layout_marginEnd="60dp"
+                   android:layout_marginRight="60dp"
                    android:background="@drawable/blueradius"
                    android:text="SUBMIT"
                    android:textColor="#FFFFFF"
-                   app:layout_constraintStart_toEndOf="@+id/savedraft"
+                   app:layout_constraintEnd_toEndOf="parent"
                    app:layout_constraintTop_toBottomOf="@+id/kateText" />
 
 
            </androidx.constraintlayout.widget.ConstraintLayout>
        </LinearLayout>
-<!--    </ScrollView>-->
-
 </ScrollView>

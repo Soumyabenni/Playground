@@ -4,13 +4,17 @@ import java.io.Serializable;
 
 public class RequestModel implements Serializable {
 
-    String requestdescription;
+    String requestDescription;
+
+    public RequestModel(String requestdescription) {
+        requestDescription = requestdescription;
+    }
 
     public String getRequestdescription() {
-        return requestdescription;
+        return requestDescription;
     }
 
     public void setRequestdescription(String requestdescription) {
-        this.requestdescription = requestdescription;
+        this.requestDescription = requestdescription;
     }
 }
