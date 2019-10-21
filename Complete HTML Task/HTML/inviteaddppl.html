@@ -13,8 +13,7 @@
             <img src="../icons/request-icons-02.png" height="40px" width="40px" />
             <div class="profile">
                 <img src="../icons/profile.png" height="40px" width="40px" />
-                <span
-                    style="font:Roboto; font-size:12px; letter-spacing:0.9px; line-height:14px; font-weight:bold;  color: #595959;
+                <span style="font:Roboto; font-size:12px; letter-spacing:0.9px; line-height:14px; font-weight:bold;  color: #595959;
                     ">John
                     Doe</span>
                 <img src="../icons/request-icons-05.png" height="18px" width="18px" />
@@ -85,17 +84,20 @@
             </div>
             <div class="main1" style="display: none;" id="act">
                 <div class="preview1">
-                    <span style="font-family: Roboto; font-weight:bold; font-size: 14px; color:#B5B5B5; letter-spacing: 1.4px;">ACKNOWLEDGEMENT</span>
-                   
+                    <span
+                        style="font-family: Roboto; font-weight:bold; font-size: 14px; color:#B5B5B5; letter-spacing: 1.4px;">ACKNOWLEDGEMENT</span>
+
                     <p style=" font-weight:bold; font-size: 14px;">
-                    Your request has been saved as draft.</p>
-            
+                        Your request has been saved as draft.</p>
+
                     <p style=" font-weight:regular; font-size: 12px; width:70%;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor vehicula, tortor ipsum
-                        faucibus nunc, id aliquam lacus odio nec magna. Cras a ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper
-                        tempor facilisis.</p>  
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor
+                        vehicula, tortor ipsum
+                        faucibus nunc, id aliquam lacus odio nec magna. Cras a ipsum placerat, efficitur nibh sed,
+                        iaculis elit. Mauris semper
+                        tempor facilisis.</p>
                 </div>
-        </div>
+            </div>
             <div id="modal" class="model">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -106,7 +108,8 @@
                     </div>
                     <div class="modal-body">
 
-                        <div class="search"><input type="text" id="icon" placeholder="search" style="cursor: pointer;" onclick="search()"/>
+                        <div class="search"><input type="text" id="icon" placeholder="search" style="cursor: pointer;"
+                                onclick="search()" />
                         </div>
                         <div class="browse1">
                             <div class="card1">
@@ -117,7 +120,7 @@
                                             amet.</span></p>
                                 </div>
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="1"
-                                onclick="showminus(1)"/>
+                                    onclick="showminus(1)" />
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -127,7 +130,7 @@
                                             amet.</span></p>
                                 </div>
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="2"
-                                onclick="showminus(2)"/>
+                                    onclick="showminus(2)" />
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -137,7 +140,7 @@
                                             amet.</span></p>
                                 </div>
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="3"
-                                onclick="showminus(3)"/>
+                                    onclick="showminus(3)" />
                             </div>
                             <div class="card1">
                                 <div class="new1">
@@ -148,21 +151,22 @@
                                             amet.</span></p>
                                 </div>
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="4"
-                                onclick="showminus(4)"/>
+                                    onclick="showminus(4)" />
                             </div>
                             <div class="card1">
                                 <div class="new1">
                                     <img src="../icons/profile.png" height="40px" width="40px" />
-                                    <p><span style="font-family: Roboto;  font-size: 12px;">Peter Dinklage</span><br /><span
+                                    <p><span style="font-family: Roboto;  font-size: 12px;">Peter
+                                            Dinklage</span><br /><span
                                             style="font-family: Roboto;  font-size: 10px;">Lorem ipsum doler sit
                                             amet.</span></p>
                                 </div>
                                 <img src="../icons/request-icons-10.png" height="30px" width="30px" id="5"
-                                onclick="showminus(5)"/>
+                                    onclick="showminus(5)" />
                             </div>
-                            
+
                         </div>
-                        <div class="notfound hide" >
+                        <div class="notfound hide">
                             <img src="../icons/request-icons-04.png" height="80px" width="80px">
                             <p>No Results Found</p>
                             <p>We can’t find any item matching your search</p>
@@ -183,49 +187,48 @@
         var modal = document.getElementById('modal');
         var closeBtn = document.getElementsByClassName('closeBtn')[0];
         var addItem = document.getElementById('addItem');
-        var browse1=document.getElementsByClassName('browse1');
-        var icon=document.getElementById('icon');
-        var hide=document.getElementsByClassName('hide');
-        var selected=document.getElementById('selected');
-        var count=0;
-        var card=document.getElementsByClassName('card1');
+        var browse1 = document.getElementsByClassName('browse1');
+        var icon = document.getElementById('icon');
+        var hide = document.getElementsByClassName('hide');
+        var selected = document.getElementById('selected');
+        var count = 0;
+        var card = document.getElementsByClassName('card1');
 
         addItem.addEventListener('click', Openmodal);
 
-       
+
         function Openmodal() {
             modal.style.display = 'block';
 
         }
         closeBtn.addEventListener('click', Closemodal);
         function Closemodal() {
-                    modal.style.display = 'none';
-                    icon.value="";
-                    browse1[0].style.display="block";
-                    hide[0].style.display="none";
-                    for(var i=0;i<card.length-1;i++)
-                {
-                    card[i].style.display = 'flex';
-                } 
-                }
+            modal.style.display = 'none';
+            icon.value = "";
+            browse1[0].style.display = "block";
+            hide[0].style.display = "none";
+            for (var i = 0; i < card.length - 1; i++) {
+                card[i].style.display = 'flex';
+            }
+        }
         function showminus(id) {
-                    var img = document.getElementById(id);
-                    var src = img.getAttribute('src');
-                    if(src.includes('10')){
-                      img.setAttribute('src', '../icons/request-icons-09.png')
-                      count++;
-                      selected.innerText= count + ' person selected';
-                    }
-                    
-                    else{
-                      img.setAttribute('src', '../icons/request-icons-10.png')
-                      count--;
-                      if(count <= 0)
-                      selected.innerText= "You haven't selected any person";
-                      else
-                      selected.innerText= count + ' person selected';
-                    }     
-                }
+            var img = document.getElementById(id);
+            var src = img.getAttribute('src');
+            if (src.includes('10')) {
+                img.setAttribute('src', '../icons/request-icons-09.png')
+                count++;
+                selected.innerText = count + ' person selected';
+            }
+
+            else {
+                img.setAttribute('src', '../icons/request-icons-10.png')
+                count--;
+                if (count <= 0)
+                    selected.innerText = "You haven't selected any person";
+                else
+                    selected.innerText = count + ' person selected';
+            }
+        }
         function back() {
             window.location.assign('attachments.html');
         }
@@ -236,21 +239,20 @@
             window.location.assign('addApprover.html');
         }
 
-        function search(){
-            if(icon.value === 'Peter Parker'){
-                icon.value='Peter Dinklage';
-                browse1[0].style.display="block";
-                hide[0].style.display="none";
-                for(var i=0;i<card.length-1;i++)
-                {
+        function search() {
+            if (icon.value === 'Peter Parker') {
+                icon.value = 'Peter Dinklage';
+                browse1[0].style.display = "block";
+                hide[0].style.display = "none";
+                for (var i = 0; i < card.length - 1; i++) {
                     card[i].style.display = 'none';
                 }
             }
-            else{
-icon.value='Peter Parker';
-browse1[0].style.display="none";
-hide[0].style.display="flex";
-                }
+            else {
+                icon.value = 'Peter Parker';
+                browse1[0].style.display = "none";
+                hide[0].style.display = "flex";
+            }
         }
     </script>
 </body>
