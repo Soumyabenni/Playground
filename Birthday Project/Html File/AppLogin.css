@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #466368;
+  /* background: linear-gradient(#648880, #293f50); */
+  /* background: linear-gradient(#FCE5CD, #f5ede6); */
+  /* background: linear-gradient(#FCE5CD,#293f50,#52CCEE,#293f50);
+   */
+   background-color: #8dacc8;
+   background-image: linear-gradient(#cfdbe7,#8dacc8);
+   background-repeat: no-repeat;
+   height: 100%;
+  border-radius: 6px;
+  /* height: 120px; */
+}
+
+.header {
+  background-color: rgb(255, 255, 255);
+  padding: 30px 35px;
+  box-shadow: 0px 0px 8px grey;
+  display:flex;
+  justify-content: space-between;
+}
+.header p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  color:#293f50;
+}
+.outline{
+  margin: 15px 205px 0px 205px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  box-shadow: 0px 0px 8px grey;
+}
+.login-button{
+  padding: 10px;
+  font-size: 15px;
+  background-color: #32bdd2;
+  width: 15%;
+  color: #f6f8f9;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+.container {
+  padding: 25px;
+  background-color: #f6f8f9;
+  min-height: 500px;
+  margin: 15px 205px 25px 205px;
+  box-shadow: 0px 0px 8px grey;
+
+}
+.inner-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 8px grey;
+  padding: 15px;
+  min-height: 450px;
+}
+.inner-container p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  color:#293f50;
+}
+.imagedesign{
+    width: 55%;
+    height: 55%;
+    background-color: yellow;
+    top:6%;
+    left:13%;
+   }
+   .design{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    color:#293f50;
+    background-color: aqua;
+  }
+  .outlinefooter{
+    margin: 5px 205px 10px 205px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    box-shadow: 0px 0px 8px grey;
+  }
+  .footer {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 35px;
+    box-shadow: 0px 0px 8px grey;
+    display:flex;
+    justify-content: space-between;
+  }
+  .footer p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    color:#293f50;
+  }
